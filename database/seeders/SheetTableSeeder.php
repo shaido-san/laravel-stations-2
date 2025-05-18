@@ -7,13 +7,11 @@ use Illuminate\Support\Facades\DB;
 
 class SheetTableSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
     public function run()
     {
+        // テーブルのデータをクリア
+        DB::table('sheets')->truncate();
+
         $seeds = [
             ['id' => 1, 'column' => 1, 'row' => 'a'],
             ['id' => 2, 'column' => 2, 'row' => 'a'],
